@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AWSLambdaStateService">
+    <option name="configs">
+      <map>
+        <entry key="photos-processor">
+          <value>
+            <LambdaConfig>
+              <option name="functionName" value="photos-processor" />
+              <option name="jarFilePath" value="$PROJECT_DIR$/build/libs/beesstock-uploads-processor.jar" />
+            </LambdaConfig>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

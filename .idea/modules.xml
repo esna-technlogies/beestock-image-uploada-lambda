@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/beesstock-uploads-processor.iml" filepath="$PROJECT_DIR$/.idea/modules/beesstock-uploads-processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/beesstock-uploads-processor_main.iml" filepath="$PROJECT_DIR$/.idea/modules/beesstock-uploads-processor_main.iml" group="beesstock-uploads-processor" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/beesstock-uploads-processor_test.iml" filepath="$PROJECT_DIR$/.idea/modules/beesstock-uploads-processor_test.iml" group="beesstock-uploads-processor" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: me.ccampo:spring-aws-lambda:1.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.ccampo/spring-aws-lambda/1.1.0/b11094fa31185b90ba4da90f8a1b5aa26076d318/spring-aws-lambda-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.ccampo/spring-aws-lambda/1.1.0/c2f45a39c7abec1155ecaecb9e65551b76c45f74/spring-aws-lambda-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
