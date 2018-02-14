@@ -1,0 +1,57 @@
+buildscript {
+    ext {
+        awsLambdaCoreVersion = "1.1.0"
+        springContextVersion = "4.2.6.RELEASE"
+        junitVersion = "4.12"
+        assertJVersion = "3.4.1"
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.0.RC2"
+    }
+}
+
+apply plugin: "io.spring.dependency-management"
+apply plugin: "java"
+
+group "me.ccampo"
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    // AWS Lambda requires fat jars, so  we include all dependent libraries in the archive "lib" directory.
+    into("lib") {
+        from configurations.runtime
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "com.amazonaws:aws-java-sdk-bom:1.10.77"
+    }
+}
+
+
+dependencies {
+    compile "org.springframework:spring-context:${springContextVersion}"
+    compile("org.springframework.boot:spring-boot-starter-web:1.5.7.RELEASE")
+    compile "com.amazonaws:aws-lambda-java-core:1.1.0"
+    compile "com.amazonaws:aws-lambda-java-events:2.0.1"
+    compile "com.amazonaws:aws-lambda-java-log4j:1.0.0"
+    compile "com.amazonaws:aws-lambda-java-log4j2:1.0.0"
+    compile "me.ccampo:spring-aws-lambda:${awsLambdaCoreVersion}"
+    compile "com.amazonaws:aws-java-sdk-s3"
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    compile group: 'commons-io', name: 'commons-io', version: '2.4'
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile("junit:junit:${junitVersion}")
+    testCompile("org.assertj:assertj-core:${assertJVersion}")
+}
